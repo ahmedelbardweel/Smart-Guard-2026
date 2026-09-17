@@ -34,8 +34,8 @@
     <string name="card_logs_hint">Times</string>
     <string name="card_stats">Stats</string>
     <string name="card_stats_hint">Charts</string>
-    <string name="ai_title">Next</string>
-    <string name="ai_reading">—</string>
+    <string name="prediction_title">Next</string>
+    <string name="prediction_reading">—</string>
     <string name="next_motion">Next motion</string>
     <string name="next_motion_none">—</string>
     <string name="outlook_title">Outlook</string>
@@ -66,4 +66,35 @@
     <string name="splash_caption">Rodent Guard</string>
     <string name="event_motion">Motion</string>
     <string name="event_quiet">Quiet</string>
+    <string name="recent_event">Recent Event</string>
+    <string name="no_recent_events">No recent events</string>
+    
+    <!-- Settings Strings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme_title">Theme Colors</string>
+    <string name="settings_theme_subtitle">Select the primary color for the application.</string>
+    <string name="theme_default">Default Green</string>
+    <string name="theme_green">Nature Green</string>
+    <string name="theme_blue">Ocean Blue</string>
+    <string name="theme_purple">Deep Purple</string>
+    <string name="theme_amber">Warm Amber</string>
+    <string name="theme_rose">Soft Rose</string>
+    
+    <string name="settings_appearance_title">Appearance</string>
+    <string name="settings_appearance_subtitle">Choose light, dark, or system default.</string>
+    <string name="appearance_system">System</string>
+    <string name="appearance_light">Light</string>
+    <string name="appearance_dark">Dark</string>
+    
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_subtitle">Select your preferred language.</string>
+    <string name="language_english">En</string>
+    <string name="language_arabic">Ar</string>
+    
+    <!-- Bottom Nav Strings -->
+    <string name="nav_home">Home</string>
+    <string name="nav_logs">Logs</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_report">Report</string>
+    <string name="nav_settings">Settings</string>
 </resources>

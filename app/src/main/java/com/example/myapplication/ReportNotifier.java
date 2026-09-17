@@ -35,7 +35,7 @@ public final class ReportNotifier {
 
     public static void send(Context context, PredictionEngine.WeeklyReport report) {
         ensureChannel(context);
-        Intent open = new Intent(context, ReportActivity.class);
+        Intent open = new Intent(context, MainActivity.class);
         open.putExtra(EXTRA_REPORT, report.fullText);
         open.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

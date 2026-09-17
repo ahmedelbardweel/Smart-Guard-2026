@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="4dp"
+        app:title="@string/stats_title"
+        app:subtitle="@string/stats_subtitle"
+        app:titleTextColor="?android:textColorPrimary"
+        app:subtitleTextColor="?android:textColorSecondary"
+        android:background="?attr/colorSurface" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <LinearLayout
+                android:id="@+id/panelKpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:shapeAppearance="@style/ShapeAppearance.App.Large"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/radius_lg"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/space_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kpi_total"
+                            android:textAppearance="@style/TextAppearance.App.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/txtKpiTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="0"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="@style/TextAppearance.App.TitleLarge" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:shapeAppearance="@style/ShapeAppearance.App.Large"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/radius_lg"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/space_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kpi_today"
+                            android:textAppearance="@style/TextAppearance.App.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/txtKpiToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="0"
+                            android:textColor="?attr/colorSecondary"
+                            android:textAppearance="@style/TextAppearance.App.TitleLarge" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:shapeAppearance="@style/ShapeAppearance.App.Large"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/radius_lg"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/space_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kpi_idle"
+                            android:textAppearance="@style/TextAppearance.App.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/txtKpiIdle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="0"
+                            android:textColor="?attr/colorSecondary"
+                            android:textAppearance="@style/TextAppearance.App.TitleLarge" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:shapeAppearance="@style/ShapeAppearance.App.ExtraLarge"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/radius_lg"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/screen_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.mikepenz.iconics.view.IconicsImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            app:ico_icon="gmd-trending-up"
+                            app:ico_color="?attr/colorPrimary"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_sm"
+                            android:layout_weight="1"
+                            android:text="@string/outlook_title"
+                            android:textAppearance="@style/TextAppearance.App.TitleMedium" />
+
+                        <TextView
+                            android:id="@+id/txtRiskBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip"
+                            android:paddingStart="12dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="6dp"
+                            android:text="—"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="@style/TextAppearance.App.LabelLarge" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPrediction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/prediction_reading"
+                        android:textAppearance="@style/TextAppearance.App.BodyMedium" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:shapeAppearance="@style/ShapeAppearance.App.ExtraLarge"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/radius_lg"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_md">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chart_mix"
+                        android:textAppearance="@style/TextAppearance.App.TitleMedium" />
+
+                    <com.example.myapplication.DonutChartView
+                        android:id="@+id/chartDonut"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:layout_marginTop="@dimen/space_sm" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:shapeAppearance="@style/ShapeAppearance.App.ExtraLarge"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/radius_lg"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_md">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chart_hourly"
+                        android:textAppearance="@style/TextAppearance.App.TitleMedium" />
+
+                    <com.example.myapplication.BarChartView
+                        android:id="@+id/chartHourly"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="@dimen/space_sm" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:layout_marginBottom="@dimen/space_md"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:shapeAppearance="@style/ShapeAppearance.App.ExtraLarge"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="@dimen/radius_lg"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_md">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chart_week"
+                        android:textAppearance="@style/TextAppearance.App.TitleMedium" />
+
+                    <com.example.myapplication.SparklineView
+                        android:id="@+id/chartWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="@dimen/space_sm" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

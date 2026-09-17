@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Base.Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/cyan</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/mint</item>
-        <item name="android:statusBarColor">@color/bg_deep</item>
-        <item name="android:navigationBarColor">@color/bg_deep</item>
-        <item name="android:windowBackground">@color/bg_deep</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:layoutDirection">ltr</item>
+        
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        
+        <!-- Lighten the card border in dark mode -->
+        <item name="colorOutlineVariant">#2D2D2D</item>
+        
+        <item name="android:windowLightStatusBar">false</item>
         <item name="colorControlActivated">@color/cyan</item>
+
+        <!-- Restore custom typography, buttons, and animations in Dark Mode -->
+        <item name="android:fontFamily">@font/app_font</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnim</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
     </style>
 </resources>

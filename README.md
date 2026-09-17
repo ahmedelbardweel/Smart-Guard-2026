@@ -27,3 +27,5 @@ No cloud. No extra sensors. One real HC device.
 - Material 3
 - Room
 - WorkManager
+
+# Smart-Guard-2026

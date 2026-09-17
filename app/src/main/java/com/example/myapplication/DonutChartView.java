@@ -10,6 +10,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import android.util.TypedValue;
 
 public class DonutChartView extends View {
 
@@ -33,26 +34,42 @@ public class DonutChartView extends View {
         init();
     }
 
+    private int getThemeColor(String attrName) {
+        int attrResId = getResources().getIdentifier(attrName, "attr", getContext().getPackageName());
+        if (attrResId == 0) {
+            // Try android namespace for textColorPrimary etc
+            attrResId = getResources().getIdentifier(attrName, "attr", "android");
+        }
+        TypedValue typedValue = new TypedValue();
+        getContext().getTheme().resolveAttribute(attrResId, typedValue, true);
+        return typedValue.data;
+    }
+
     private void init() {
+        if (isInEditMode()) {
+            motionValue = 70f;
+            idleValue = 30f;
+        }
+
         motionPaint.setStyle(Paint.Style.STROKE);
         motionPaint.setStrokeCap(Paint.Cap.ROUND);
-        motionPaint.setColor(ContextCompat.getColor(getContext(), R.color.rose));
+        motionPaint.setColor(getThemeColor("colorPrimary"));
 
         idlePaint.setStyle(Paint.Style.STROKE);
         idlePaint.setStrokeCap(Paint.Cap.ROUND);
-        idlePaint.setColor(ContextCompat.getColor(getContext(), R.color.mint));
+        idlePaint.setColor(getThemeColor("colorSecondary"));
 
         trackPaint.setStyle(Paint.Style.STROKE);
-        trackPaint.setColor(ContextCompat.getColor(getContext(), R.color.stroke));
+        trackPaint.setColor(getThemeColor("colorOutlineVariant"));
 
-        titlePaint.setColor(ContextCompat.getColor(getContext(), R.color.text_primary));
+        titlePaint.setColor(getThemeColor("textColorPrimary"));
         titlePaint.setTextAlign(Paint.Align.CENTER);
         titlePaint.setTypeface(Typeface.DEFAULT_BOLD);
 
-        subtitlePaint.setColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
+        subtitlePaint.setColor(getThemeColor("textColorSecondary"));
         subtitlePaint.setTextAlign(Paint.Align.CENTER);
 
-        legendPaint.setColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
+        legendPaint.setColor(getThemeColor("textColorSecondary"));
     }
 
     public void setValues(int motion, int idle) {
@@ -98,14 +115,14 @@ public class DonutChartView extends View {
 
         float legendY = arcBounds.bottom + sp(22);
         legendPaint.setTextAlign(Paint.Align.LEFT);
-        legendPaint.setColor(ContextCompat.getColor(getContext(), R.color.rose));
+        legendPaint.setColor(motionPaint.getColor());
         canvas.drawCircle(getWidth() * 0.20f, legendY, 7, legendPaint);
-        legendPaint.setColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
+        legendPaint.setColor(subtitlePaint.getColor());
         canvas.drawText("Motion " + (int) motionValue, getWidth() * 0.24f, legendY + 5, legendPaint);
 
-        legendPaint.setColor(ContextCompat.getColor(getContext(), R.color.mint));
+        legendPaint.setColor(idlePaint.getColor());
         canvas.drawCircle(getWidth() * 0.56f, legendY, 7, legendPaint);
-        legendPaint.setColor(ContextCompat.getColor(getContext(), R.color.text_secondary));
+        legendPaint.setColor(subtitlePaint.getColor());
         canvas.drawText("Quiet " + (int) idleValue, getWidth() * 0.60f, legendY + 5, legendPaint);
     }
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حارس القوارض</string>
+    <string name="app_tagline">مراقبة المنزل</string>
+    <string name="connect_bluetooth">اتصال</string>
+    <string name="reconnect">إعادة الاتصال</string>
+    <string name="status_waiting">غير متصل</string>
+    <string name="status_connecting">جاري الربط…</string>
+    <string name="status_connected">متصل</string>
+    <string name="status_motion">يوجد حركة</string>
+    <string name="status_idle">هادئ</string>
+    <string name="status_bt_off">البلوتوث مغلق</string>
+    <string name="status_no_device">لا يوجد جهاز HC</string>
+    <string name="status_failed">فشل</string>
+    <string name="status_denied">الصلاحية مطلوبة</string>
+    <string name="status_disconnected">فقدان الاتصال</string>
+    <string name="chip_offline">مغلق</string>
+    <string name="chip_linking">ربط</string>
+    <string name="chip_online">مفتوح</string>
+    <string name="chip_bt_off">بلوتوث</string>
+    <string name="chip_none">لا يوجد</string>
+    <string name="chip_failed">فشل</string>
+    <string name="chip_denied">مرفوض</string>
+    <string name="chip_lost">مفقود</string>
+    <string name="chip_motion">مباشر</string>
+    <string name="chip_quiet">هادئ</string>
+    <string name="device_unknown">جهاز غير معروف</string>
+    
+    <string name="logs_title">السجلات</string>
+    <string name="logs_subtitle">حسب الوقت</string>
+    <string name="logs_count">%d حدث</string>
+    
+    <string name="stats_title">الإحصائيات</string>
+    <string name="stats_subtitle">آخر 7 أيام</string>
+    
+    <string name="card_logs">السجلات</string>
+    <string name="card_logs_hint">الأوقات</string>
+    <string name="card_stats">الإحصائيات</string>
+    <string name="card_stats_hint">الرسوم البيانية</string>
+    
+    <string name="prediction_title">التالي</string>
+    <string name="prediction_reading">—</string>
+    <string name="next_motion">الحركة القادمة</string>
+    <string name="next_motion_none">—</string>
+    <string name="outlook_title">التوقعات</string>
+    
+    <string name="empty_logs">لا توجد أحداث بعد.</string>
+    
+    <string name="logs_clear_title">حذف السجلات؟</string>
+    <string name="logs_clear_message">سيتم مسح جميع الأحداث. ستتم إعادة تعيين توقعات الحركة حتى توفر بيانات جديدة.</string>
+    <string name="logs_clear_confirm">حذف</string>
+    <string name="logs_cleared">تم تنظيف السجلات</string>
+    
+    <string name="kpi_total">المجموع</string>
+    <string name="kpi_today">اليوم</string>
+    <string name="kpi_idle">هادئ</string>
+    
+    <string name="chart_hourly">بالساعة</string>
+    <string name="chart_week">7 أيام</string>
+    <string name="chart_mix">مختلط</string>
+    
+    <string name="report_title">أسبوعي</string>
+    <string name="report_subtitle">النشاط</string>
+    <string name="report_card_title">أسبوعي</string>
+    <string name="report_card_hint">الجمعة 8م</string>
+    <string name="report_send_now">إرسال</string>
+    <string name="report_view">فتح</string>
+    <string name="report_share">مشاركة</string>
+    <string name="report_enabled">مفعل</string>
+    <string name="report_disabled">مغلق</string>
+    <string name="report_not_sent">لم يُرسل</string>
+    <string name="report_last_sent">أُرسل %s</string>
+    <string name="report_preparing">جاري التجهيز…</string>
+    <string name="report_permission_needed">السماح بالإشعارات</string>
+    
+    <string name="splash_caption">حارس القوارض</string>
+    <string name="event_motion">حركة</string>
+    <string name="event_quiet">هادئ</string>
+    <string name="recent_event">آخر حدث</string>
+    <string name="no_recent_events">لا توجد أحداث حديثة</string>
+    
+    <!-- Settings Strings -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_theme_title">ألوان المظهر</string>
+    <string name="settings_theme_subtitle">اختر اللون الأساسي للتطبيق.</string>
+    <string name="theme_default">أخضر افتراضي</string>
+    <string name="theme_green">أخضر طبيعي</string>
+    <string name="theme_blue">أزرق محيطي</string>
+    <string name="theme_purple">بنفسجي داكن</string>
+    <string name="theme_amber">كهرماني دافئ</string>
+    <string name="theme_rose">وردي ناعم</string>
+    
+    <string name="settings_appearance_title">المظهر</string>
+    <string name="settings_appearance_subtitle">اختر الوضع الفاتح، الداكن، أو حسب النظام.</string>
+    <string name="appearance_system">حسب النظام</string>
+    <string name="appearance_light">فاتح</string>
+    <string name="appearance_dark">داكن</string>
+    
+    <string name="settings_language_title">اللغة (Language)</string>
+    <string name="settings_language_subtitle">اختر لغتك المفضلة.</string>
+    <string name="language_english">الانجليزي</string>
+    <string name="language_arabic">العربية</string>
+    
+    <!-- Bottom Nav Strings -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_logs">السجلات</string>
+    <string name="nav_analytics">الإحصائيات</string>
+    <string name="nav_report">التقرير</string>
+    <string name="nav_settings">الإعدادات</string>
+</resources>

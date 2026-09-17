@@ -37,6 +37,14 @@ dependencies {
     implementation libs.room.runtime
     annotationProcessor libs.room.compiler
     implementation libs.work.runtime
+    
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    
+    // Android-Iconics
+    implementation libs.iconics.core
+    implementation libs.iconics.views
+    implementation libs.iconics.typeface.material
 
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit

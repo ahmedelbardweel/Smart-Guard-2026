@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing System -->
+    <dimen name="space_xs">5dp</dimen>
+    <dimen name="space_sm">5dp</dimen>
+    <dimen name="space_md">5dp</dimen>
+    <dimen name="space_lg">5dp</dimen>
+    <dimen name="screen_padding">10dp</dimen>
+
+    <!-- Radius System -->
+    <dimen name="radius_sm">5dp</dimen>
+    <dimen name="radius_md">5dp</dimen>
+    <dimen name="radius_lg">5dp</dimen>
+    <dimen name="radius_xl">5dp</dimen>
+    <dimen name="button_radius">5dp</dimen>
+</resources>

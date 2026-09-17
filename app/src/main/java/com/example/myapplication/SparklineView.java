@@ -11,6 +11,8 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import android.util.TypedValue;
+import androidx.core.graphics.ColorUtils;
 
 public class SparklineView extends View {
 
@@ -34,18 +36,28 @@ public class SparklineView extends View {
         init();
     }
 
+    private int getThemeColor(String attrName) {
+        int attrResId = getResources().getIdentifier(attrName, "attr", getContext().getPackageName());
+        if (attrResId == 0) {
+            attrResId = getResources().getIdentifier(attrName, "attr", "android");
+        }
+        TypedValue typedValue = new TypedValue();
+        getContext().getTheme().resolveAttribute(attrResId, typedValue, true);
+        return typedValue.data;
+    }
+
     private void init() {
         linePaint.setStyle(Paint.Style.STROKE);
         linePaint.setStrokeWidth(dp(3));
-        linePaint.setColor(ContextCompat.getColor(getContext(), R.color.cyan));
+        linePaint.setColor(getThemeColor("colorPrimary"));
         linePaint.setStrokeJoin(Paint.Join.ROUND);
         linePaint.setStrokeCap(Paint.Cap.ROUND);
 
         fillPaint.setStyle(Paint.Style.FILL);
-        dotPaint.setColor(ContextCompat.getColor(getContext(), R.color.cyan));
-        textPaint.setColor(ContextCompat.getColor(getContext(), R.color.text_muted));
+        dotPaint.setColor(getThemeColor("colorPrimary"));
+        textPaint.setColor(getThemeColor("textColorSecondary"));
         textPaint.setTextAlign(Paint.Align.CENTER);
-        gridPaint.setColor(ContextCompat.getColor(getContext(), R.color.chart_grid));
+        gridPaint.setColor(getThemeColor("colorOutlineVariant"));
         gridPaint.setStrokeWidth(1.5f);
     }
 
@@ -76,11 +88,14 @@ public class SparklineView extends View {
             canvas.drawLine(padL, y, getWidth() - padR, y, gridPaint);
         }
 
+        int primaryColor = linePaint.getColor();
+        int transparentPrimary = ColorUtils.setAlphaComponent(primaryColor, 0);
+        
         fillPaint.setShader(new LinearGradient(
                 0, padT,
                 0, padT + chartH,
-                ContextCompat.getColor(getContext(), R.color.cyan),
-                0x001F7A46,
+                primaryColor,
+                transparentPrimary,
                 Shader.TileMode.CLAMP
         ));
 

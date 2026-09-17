@@ -9,6 +9,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import android.util.TypedValue;
 
 public class BarChartView extends View {
 
@@ -29,12 +30,26 @@ public class BarChartView extends View {
         init();
     }
 
+    private int getThemeColor(String attrName) {
+        int attrResId = getResources().getIdentifier(attrName, "attr", getContext().getPackageName());
+        if (attrResId == 0) {
+            attrResId = getResources().getIdentifier(attrName, "attr", "android");
+        }
+        TypedValue typedValue = new TypedValue();
+        getContext().getTheme().resolveAttribute(attrResId, typedValue, true);
+        return typedValue.data;
+    }
+
     private void init() {
-        barPaint.setColor(ContextCompat.getColor(getContext(), R.color.cyan_dim));
-        highlightPaint.setColor(ContextCompat.getColor(getContext(), R.color.cyan));
-        gridPaint.setColor(ContextCompat.getColor(getContext(), R.color.chart_grid));
+        if (isInEditMode()) {
+            values = new int[]{10, 5, 2, 8, 15, 20, 18, 5, 2, 1, 0, 0, 5, 10, 15, 30, 25, 20, 15, 10, 5, 2, 1, 0};
+        }
+        
+        barPaint.setColor(getThemeColor("colorSecondaryContainer"));
+        highlightPaint.setColor(getThemeColor("colorPrimary"));
+        gridPaint.setColor(getThemeColor("colorOutlineVariant"));
         gridPaint.setStrokeWidth(1.5f);
-        textPaint.setColor(ContextCompat.getColor(getContext(), R.color.text_muted));
+        textPaint.setColor(getThemeColor("textColorSecondary"));
         textPaint.setTextAlign(Paint.Align.CENTER);
     }
 
