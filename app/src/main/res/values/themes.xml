@@ -107,6 +107,13 @@
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
+    <style name="TextAppearance.App.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/app_font</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
     <style name="TextAppearance.App.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">@font/app_font</item>

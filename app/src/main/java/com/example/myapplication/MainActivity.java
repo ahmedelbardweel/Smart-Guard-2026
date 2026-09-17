@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +16,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences prefs = getSharedPreferences("app_prefs", MODE_PRIVATE);
+        boolean isFirstRun = prefs.getBoolean("isFirstRun", true);
+        if (isFirstRun) {
+            androidx.core.os.LocaleListCompat currentLocale = androidx.appcompat.app.AppCompatDelegate.getApplicationLocales();
+            if (currentLocale.isEmpty()) {
+                androidx.appcompat.app.AppCompatDelegate.setApplicationLocales(
+                        androidx.core.os.LocaleListCompat.forLanguageTags("ar")
+                );
+            }
+            startActivity(new Intent(this, OnboardingActivity.class));
+            finish();
+            super.onCreate(savedInstanceState);
+            return;
+        }
+
         ThemeHelper.applyTheme(this);
         
         android.util.TypedValue typedValue = new android.util.TypedValue();

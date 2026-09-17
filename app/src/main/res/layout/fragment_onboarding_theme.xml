@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/onboarding_select_theme"
+        android:textAppearance="@style/TextAppearance.App.HeadlineSmall"
+        android:textColor="?attr/colorOnBackground"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/onboarding_theme_desc"
+        android:textAppearance="@style/TextAppearance.App.BodyLarge"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignBounds"
+            android:useDefaultMargins="false">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemeDefault" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication.Green">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemeGreen" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication.Blue">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemeBlue" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication.Purple">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemePurple" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication.Amber">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemeAmber" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:theme="@style/Theme.MyApplication.Rose">
+                <include layout="@layout/layout_theme_preview_card" android:id="@+id/cardThemeRose" />
+            </FrameLayout>
+
+        </GridLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

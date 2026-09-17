@@ -12,6 +12,7 @@ work = "2.10.1"
 navigation = "2.8.8"
 iconics = "5.6.0"
 iconicsMaterial = "4.0.0.4-kotlin"
+lottie = "6.4.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -29,6 +30,7 @@ navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version
 iconics-core = { group = "com.mikepenz", name = "iconics-core", version.ref = "iconics" }
 iconics-views = { group = "com.mikepenz", name = "iconics-views", version.ref = "iconics" }
 iconics-typeface-material = { module = "com.mikepenz:google-material-typeface", version.ref = "iconicsMaterial" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

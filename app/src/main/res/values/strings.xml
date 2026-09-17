@@ -97,4 +97,23 @@
     <string name="nav_analytics">Analytics</string>
     <string name="nav_report">Report</string>
     <string name="nav_settings">Settings</string>
+    
+    <!-- Onboarding Strings -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_start">Get Started</string>
+    <string name="onboarding_title_1">Welcome to Smart Guard</string>
+    <string name="onboarding_desc_1">The smart companion to monitor rodent activity in your facility.</string>
+    <string name="onboarding_title_2">Live Connection</string>
+    <string name="onboarding_desc_2">Connect to your Bluetooth sensor and monitor real-time motion and quiet events directly from the Home screen.</string>
+    <string name="onboarding_title_3">Smart Analytics</string>
+    <string name="onboarding_desc_3">Discover activity patterns over the last 7 days and get predictions for the next likely motion hour.</string>
+    <string name="onboarding_title_4">Logs &amp; Reports</string>
+    <string name="onboarding_desc_4">Keep a full history of events and receive automated weekly activity reports to stay informed.</string>
+    <string name="onboarding_select_theme">Choose your color</string>
+    <string name="onboarding_theme_desc">Pick the primary color that suits your style.</string>
+    <string name="onboarding_select_language">Language / اللغة</string>
+    <string name="onboarding_lang_desc">Select your preferred language.</string>
+    <string name="onboarding_select_appearance">Choose appearance</string>
+    <string name="onboarding_app_desc">Light, dark, or follow system.</string>
 </resources>

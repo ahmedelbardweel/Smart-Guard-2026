@@ -46,6 +46,9 @@ dependencies {
     implementation libs.iconics.views
     implementation libs.iconics.typeface.material
 
+    // Lottie for animations
+    implementation libs.lottie
+
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

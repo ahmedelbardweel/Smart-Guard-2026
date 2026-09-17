@@ -28,7 +28,7 @@ public class ThemeHelper {
 
     public static int getNightMode(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        return prefs.getInt(KEY_NIGHT_MODE, MODE_SYSTEM);
+        return prefs.getInt(KEY_NIGHT_MODE, MODE_LIGHT);
     }
 
     public static void applyNightMode(Context context) {
@@ -43,7 +43,7 @@ public class ThemeHelper {
 
     public static String getTheme(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        return prefs.getString(KEY_THEME, THEME_DEFAULT);
+        return prefs.getString(KEY_THEME, THEME_ROSE);
     }
 
     public static void applyTheme(Context context) {

@@ -92,7 +92,7 @@
     
     <string name="settings_appearance_title">المظهر</string>
     <string name="settings_appearance_subtitle">اختر الوضع الفاتح، الداكن، أو حسب النظام.</string>
-    <string name="appearance_system">حسب النظام</string>
+    <string name="appearance_system">النظام</string>
     <string name="appearance_light">فاتح</string>
     <string name="appearance_dark">داكن</string>
     
@@ -107,4 +107,23 @@
     <string name="nav_analytics">الإحصائيات</string>
     <string name="nav_report">التقرير</string>
     <string name="nav_settings">الإعدادات</string>
+    
+    <!-- Onboarding Strings -->
+    <string name="onboarding_skip">تخطي</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_start">ابدأ الآن</string>
+    <string name="onboarding_title_1">مرحباً بك في Smart Guard</string>
+    <string name="onboarding_desc_1">الرفيق الذكي لمراقبة نشاط القوارض في منشأتك بكل سهولة.</string>
+    <string name="onboarding_title_2">اتصال مباشر</string>
+    <string name="onboarding_desc_2">اتصل بمستشعر البلوتوث الخاص بك وراقب أحداث الحركة والسكون في الوقت الفعلي مباشرة من الشاشة الرئيسية.</string>
+    <string name="onboarding_title_3">تحليلات ذكية</string>
+    <string name="onboarding_desc_3">اكتشف أنماط النشاط على مدار الأيام السبعة الماضية واحصل على توقعات دقيقة لساعة الحركة القادمة.</string>
+    <string name="onboarding_title_4">سجلات وتقارير</string>
+    <string name="onboarding_desc_4">احتفظ بسجل كامل للأحداث واحصل على تقارير أسبوعية تلقائية لتبقى على اطلاع دائم.</string>
+    <string name="onboarding_select_theme">اختر لونك المفضل</string>
+    <string name="onboarding_theme_desc">اختر اللون الأساسي الذي يناسب ذوقك.</string>
+    <string name="onboarding_select_language">Language / اللغة</string>
+    <string name="onboarding_lang_desc">اختر لغتك المفضلة.</string>
+    <string name="onboarding_select_appearance">المظهر الخارجي</string>
+    <string name="onboarding_app_desc">فاتح، داكن، أو حسب نظام الجهاز.</string>
 </resources>
